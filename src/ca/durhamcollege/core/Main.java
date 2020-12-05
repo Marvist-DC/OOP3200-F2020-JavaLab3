@@ -4,7 +4,9 @@
     Program Name: OOP 3200 Java Lab 3
  */
 
-package ca.durhamcollege;
+package ca.durhamcollege.core;
+
+import ca.durhamcollege.utility.WorkTicket;
 
 import java.time.LocalDate;
 

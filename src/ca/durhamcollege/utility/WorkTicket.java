@@ -1,10 +1,10 @@
 /*
     Author: Domenic Catalano & Duy Tan Vu
-    Date: Sunday, November 19, 2020
-    Program Name: OOP 3200 Java Lab 2
+    Date: Sunday, December 06, 2020
+    Program Name: OOP 3200 Java Lab 3
  */
 
-package ca.durhamcollege;
+package ca.durhamcollege.utility;
 
 import java.time.LocalDate;
 
@@ -13,11 +13,11 @@ public class WorkTicket {
     final static int MINIMUM_YEAR = 2000;
     final static int MAXIMUM_YEAR = 2099;
 
-    // PRIVATE INSTANCE VARIABLES
-    private int myTicketNumber;
-    private String myClientID;
-    private java.time.LocalDate myDate;
-    private String myDescription;
+    // PRIVATE > PROTECTED (Java Lab 3) INSTANCE VARIABLES
+    protected int myTicketNumber;
+    protected String myClientID;
+    protected java.time.LocalDate myDate;
+    protected String myDescription;
 
     // PUBLIC PROPERTIES
     public int getMyTicketNumber() {
