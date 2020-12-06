@@ -70,7 +70,7 @@ public class WorkTicket {
     }
 
     // DEFAULT CONSTRUCTORS
-    WorkTicket() {
+    public WorkTicket() {
         myTicketNumber = 0;
         myClientID = null;
         myDate = null;
@@ -78,7 +78,7 @@ public class WorkTicket {
     }
 
     // PARAMETERIZED CONSTRUCTOR
-    WorkTicket(int myTicketNumber, String myClientID, LocalDate myDate, String myDescription) {
+    public WorkTicket(int myTicketNumber, String myClientID, LocalDate myDate, String myDescription) {
         int year = myDate.getYear();
         if (myTicketNumber <= 0) {
             throw new IllegalArgumentException("Work ticket number must be greater than 0.");
