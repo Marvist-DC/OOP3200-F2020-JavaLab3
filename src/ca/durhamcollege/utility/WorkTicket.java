@@ -94,6 +94,13 @@ public class WorkTicket {
         }
     }
 
+    public WorkTicket (final WorkTicket ticket) {
+        this.myTicketNumber = ticket.myTicketNumber;
+        this.myClientID = ticket.myClientID;
+        this.myDate = ticket.myDate;
+        this.myDescription = ticket.myDescription;
+    }
+
 
     // PUBLIC METHODS
     public boolean setWorkTicket(int myTicketNumber, String myClientID, LocalDate myDate, String myDescription) {
