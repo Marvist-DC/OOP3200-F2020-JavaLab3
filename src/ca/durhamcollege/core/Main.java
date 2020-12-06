@@ -7,6 +7,7 @@
 package ca.durhamcollege.core;
 
 import ca.durhamcollege.utility.WorkTicket;
+import ca.durhamcollege.utility.ExtendedWorkTicket;
 
 import java.time.LocalDate;
 
