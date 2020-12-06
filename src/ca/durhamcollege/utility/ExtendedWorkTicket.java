@@ -69,6 +69,7 @@ public class ExtendedWorkTicket extends WorkTicket
         isValid = super.setWorkTicket(myTicketNumber, myClientID, myDate, myDescription);
         if(isValid)
         {
+
             this.myOpen = myOpen;
         }
         return isValid;
