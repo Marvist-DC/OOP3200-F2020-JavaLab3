@@ -30,6 +30,11 @@ public class Main {
             System.out.println(secondNewTicket.toString());
             System.out.println(thirdNewTicket.toString());
 
+            secondNewTicket.closeTicket();
+            thirdNewTicket.openTicket();
+
+            System.out.println(secondNewTicket.toString());
+            System.out.println(thirdNewTicket.toString());
 
             // setWorkTicket method will return false if any of the input param is invalid
             if (!firstNewTicket.setWorkTicket(1, "abc", LocalDate.of(2021, 10, 10), "dhasufh", true))
