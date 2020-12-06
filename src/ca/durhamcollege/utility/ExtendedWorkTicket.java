@@ -6,8 +6,6 @@
 
 package ca.durhamcollege.utility;
 
-import ca.durhamcollege.utility.WorkTicket;
-
 import java.time.LocalDate;
 
 public class ExtendedWorkTicket extends WorkTicket
@@ -19,45 +17,44 @@ public class ExtendedWorkTicket extends WorkTicket
     // PUBLIC PROPERTIES
 
     // Accessor called isOpen() to get the myOpen value
-    public boolean isOpen(boolean b)
+    public boolean isOpen()
     {
         return myOpen;
     }
 
     // Mutator called openTicket() that will set the myOpen attribute
-    public void openTicket(boolean myOpen)
+    public void openTicket()
     {
-        this.myOpen = myOpen;
+        this.myOpen = true;
     }
 
     // Mutator called closeTicket() that will set the myOpen attribute
-    public void closeTicket(boolean myOpen)
+    public void closeTicket()
     {
-        this.myOpen = myOpen;
+        this.myOpen = false;
     }
 
     // CONSTRUCTORS
 
     // Default Constructor initializing all the inherited attributes using the default constructor from the base class
-    ExtendedWorkTicket()
+    public ExtendedWorkTicket()
     {
         super();
         myOpen = true;
     }
 
     // Parameterized Constructor (sets inherited values and myOpen)
-    ExtendedWorkTicket(int myTicketNumber, String myClientID, LocalDate myDate, String myDescription, boolean myOpen)
+    public ExtendedWorkTicket(int myTicketNumber, String myClientID, LocalDate myDate, String myDescription, boolean myOpen)
     {
         super(myTicketNumber, myClientID, myDate, myDescription);
-        openTicket(myOpen);
-        closeTicket(myOpen);
+        this.myOpen = myOpen;
     }
 
     // Parameterized Constructor (accepts WorkTicket object)
-    ExtendedWorkTicket(final WorkTicket ticket)
+    public ExtendedWorkTicket(final WorkTicket ticket, boolean myOpen)
     {
-        super();
-        isOpen(true);
+        super(ticket);
+        this.myOpen = myOpen;
     }
 
 
@@ -84,12 +81,13 @@ public class ExtendedWorkTicket extends WorkTicket
         // Check ticket status to determine which string to display to the user
         if(myOpen)
         {
-            return "\nTicket: Open";
+            result += "\nTicket       : Open";
         }
         else
         {
-            return "\nTicket: Closed";
+            result += "\nTicket       : Closed";
         }
+        return result;
     }
 
     // STATIC METHODS
